@@ -9,7 +9,7 @@ export default class App extends Component {
     }
   }
 
-  increment = () => {
+  increment() {
     this.setState ({
       count: this.state.count + 5
     })
