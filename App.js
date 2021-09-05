@@ -14,7 +14,7 @@ export default class App extends Component {
       count: count + 5
     })
   }
-  decrement = () {
+  decrement = () => {
     this.setState ({
       count: count - 5
     })
