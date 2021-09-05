@@ -5,24 +5,21 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      input: ''
+      count: 0
     }
-
-    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange = (name) => {
+  increment = () => {
     this.setState ({
-      input: name.target.value
+      count: this.state.count + 5
     })
   }
 
   render() {
     return (
       <div className="App">
-        <h1>Full Nane</h1>
-        <input value={this.state.input} onChange={this.handleChange} />
-        <h1>Name: {this.state.input}</h1>
+        <button onClick={this.increment} className="increasenumber">Increase</button>
+        <h1>Count: {this.state.count}</h1>
       </div>
     )
   }
